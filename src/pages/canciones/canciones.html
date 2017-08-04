@@ -1,0 +1,40 @@
+
+<ion-header>
+   <ion-navbar color="primary">
+     <button ion-button  menuToggle>
+      <ion-icon name="menu"></ion-icon>  
+    </button>
+    <ion-title>Canciones</ion-title>
+    <ion-buttons end>
+      <button ion-button ion-only (click)="openCancionPopover($event)">
+      <ion-icon name="more"></ion-icon>  
+    </button>
+    </ion-buttons>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+  <div class="user playlist">
+    <img src="{{playlist.picture}}">
+    <h1>{{playlist.title}}</h1>
+  </div>
+
+  <ion-list ion-row>
+  
+    <ion-item ion-col col-12 col-sm-6 col-md-4 *ngFor="let s of songs">
+      <ion-thumbnail item-left>
+        <img src="{{s.album.cover}}">
+      </ion-thumbnail>
+      <h2>{{s.title}}</h2>
+      <p>{{s.artist.name}} {{s.album.title}}</p>
+      <audio controls>
+        <source src="{{s.preview}}" type="">
+      </audio>
+    </ion-item>
+  
+  </ion-list> 
+
+</ion-content>

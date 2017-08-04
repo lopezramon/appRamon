@@ -1,0 +1,42 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>Perfil Detalle</ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only (click)="close()">
+        <ion-icon name="close"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+<ion-content padding>
+   <ion-card *ngIf="user">  
+    <ion-item >
+      <h2>{{user.name}}</h2>
+      <p>{{user.country}}</p>
+    </ion-item>
+    <img src="{{user.picture_big}}">
+    <p>This is the default welcome page used to test the correct operation of the Apache2</p>
+    <ion-grid>
+      <ion-row>
+        <ion-col ion-col col-6 col-sm-4 text-center>
+          <button ion-button icon-left clear>
+            <ion-icon name="musical-notes"></ion-icon>
+            {{ playlists.length }} Litas
+          </button>
+          </ion-col>
+          <ion-col ion-col col-6 col-sm-4 text-center>
+          <button ion-button icon-left clear>
+            <ion-icon name="musical-notes"></ion-icon>
+            {{ totalCanciones }} Canciones
+          </button>
+          </ion-col>
+          <ion-col ion-col col-6 col-sm-4 text-center>
+          <button ion-button icon-left clear>
+            <ion-icon name="finger-print"></ion-icon>
+            {{ user.id }}
+          </button>
+          </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-card>
+</ion-content>

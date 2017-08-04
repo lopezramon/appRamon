@@ -24,3 +24,8 @@ $ ionic cordova run ios
 
 Substitute ios for android if not on a Mac.
 
+###Proyecto prueba para desarrollo de aplicaciones movil
+
+tuttorial tecnosoftware
+https://www.youtube.com/playlist?list=PLa8OODhatbXa5DtBZz5dGhvKkt2zPHg01
+
